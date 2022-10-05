@@ -47,3 +47,18 @@ h2 {
     border: 1px solid navy; 
 
  }
+ .redTile {
+    background-color: red;
+    border-radius: 50px;
+
+ }
+
+ .yellowTile {
+    background-color: yellow;
+    border-radius: 50px;
+
+ }
+#hide {
+    visibility: hidden;
+}
+
