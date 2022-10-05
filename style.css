@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(254, 141, 218);
+}
+h1 {
+    text-align: center;
+    font-size: 45px;
+    text-decoration:underline;
+    text-decoration-color: black;
+    text-shadow: 3px 3px hotpink
+    
+}
+
+div {
+    text-align: center;
+    padding: 40px;
+    font-size: 35px;
+    text-shadow: 2px 2px hotpink;
+
+}
+
+input {
+    size: 40px;
+    font-size: 40px;
+    background-color: rgb(248, 86, 180);
+}
+
+h2 {
+    text-align: center;
+}
+ .game{
+    height: 530px;
+    width: 650px;
+    background-color: rgb(28, 28, 149);
+    border: 10px solid;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+ }
+
+ .tile {
+    height: 7px;
+    width: 7px;
+    border-radius: 50px;
+    background-color: white;
+    margin: 1px;
+    border: 1px solid navy; 
+
+ }
