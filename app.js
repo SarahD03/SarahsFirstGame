@@ -3,6 +3,7 @@ let yellowPlayer = 'yellow'
 let currentPlayer = redPlayer
 let result = document.querySelector('.playerText')
 let taken
+let reset = document.querySelector('button')
 
 let tiles = document.querySelectorAll('.tile')
 // adds tiles in spots clicked and adds taken class so it cant be played over again
@@ -24,3 +25,29 @@ for (let i = 0; i < tiles.length; i++) {
     } else return
   }
 }
+
+// const init = () => {
+//   document
+//     .getElementsByClassName('taken')
+//     .addEventListener('mouseover', highlightTile)
+//   document
+//     .getElementsByClassName('taken')
+//     .addEventListener('mouseout', unhighlight)
+// }
+
+// const highlightTile = () => {
+//   document.getElementsByClassName('tile').style.accentColor = 'grey'
+// }
+// const unhighlight = () => {
+//   document.getElementsByClassName('tile').style.accentColor = 'white'
+// }
+
+// init()
+
+const ResetBoard = () => {
+  for (let i = 0; i < tiles.length; i++) {
+    tiles[i].classList.remove('redTile')
+    tiles[i].classList.remove('yellowTile')
+  }
+}
+reset.addEventListener('click', ResetBoard)
