@@ -27,8 +27,8 @@ for (let i = 0; i < tiles.length; i++) {
   }
 }
 
-const checkWin = () => {
-  const winner = [
+const checkWinner = () => {
+  const winningArrays = [
     [0, 1, 2, 3],
     [41, 40, 39, 38],
     [7, 8, 9, 10],
