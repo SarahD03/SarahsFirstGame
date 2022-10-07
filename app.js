@@ -121,6 +121,8 @@ const checkBoard = () => {
       tile4.classList.contains('yellowTile')
     ) {
       result.innerHTML = 'Player yellow wins!'
+    } else {
+      result.innerHTML = 'Draw!'
     }
   }
 }
