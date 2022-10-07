@@ -26,8 +26,9 @@ for (let i = 0; i < tiles.length; i++) {
     } else return
   }
 }
-
-const checkWinner = () => {
+///
+const checkBoard = () => {
+  //make const that shows all winning arrays
   const winningArrays = [
     [0, 1, 2, 3],
     [41, 40, 39, 38],
@@ -99,7 +100,18 @@ const checkWinner = () => {
     [12, 19, 26, 33],
     [13, 20, 27, 34]
   ]
-}
+
+
+
+// const ResetBoard = () => {
+//   for (let i = 0; i < tiles.length; i++) {
+//     tiles[i].classList.remove('redTile')
+//     tiles[i].classList.remove('yellowTile')
+//     currentPlayer = redPlayer
+//   }
+// }
+// reset.addEventListener('click', ResetBoard)
+tiles.forEach((tile) => tile.addEventListener('click', checkBoard))
 
 // const init = () => {
 //   document
@@ -118,12 +130,3 @@ const checkWinner = () => {
 // }
 
 // init()
-
-const ResetBoard = () => {
-  for (let i = 0; i < tiles.length; i++) {
-    tiles[i].classList.remove('redTile')
-    tiles[i].classList.remove('yellowTile')
-    currentPlayer = redPlayer
-  }
-}
-reset.addEventListener('click', ResetBoard)
