@@ -117,11 +117,11 @@ const checkBoard = () => {
     } else if (
       tile1.classList.contains('yellowTile') &&
       tile2.classList.contains('yellowTile') &&
-      tile3.classList.contains('yeloowTile') &&
+      tile3.classList.contains('yellowTile') &&
       tile4.classList.contains('yellowTile')
     ) {
       result.innerHTML = 'Player yellow wins!'
-    } else {
+    } else if (winningArrays.onclick == true) {
       result.innerHTML = 'Draw!'
     }
   }
@@ -138,20 +138,20 @@ reset.addEventListener('click', ResetBoard)
 
 tiles.forEach((tile) => tile.addEventListener('click', checkBoard))
 
-const init = () => {
-  document
-    .getElementsByClassName('taken')
-    .addEventListener('mouseover', highlightTile)
-  document
-    .getElementsByClassName('taken')
-    .addEventListener('mouseout', unhighlight)
-}
+// const init = () => {
+//   document
+//     .getElementsByClassName('taken')
+//     .addEventListener('mouseover', highlightTile)
+//   document
+//     .getElementsByClassName('taken')
+//     .addEventListener('mouseout', unhighlight)
+// }
 
-const highlightTile = () => {
-  document.getElementsByClassName('tile').style.accentColor = 'grey'
-}
-const unhighlight = () => {
-  document.getElementsByClassName('tile').style.accentColor = 'white'
-}
+// const highlightTile = () => {
+//   document.getElementsByClassName('tile').style.accentColor = 'grey'
+// }
+// const unhighlight = () => {
+//   document.getElementsByClassName('tile').style.accentColor = 'white'
+// }
 
-init()
+// init()
