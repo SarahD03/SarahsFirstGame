@@ -1,3 +1,4 @@
+//my variables
 let redPlayer = 'red'
 let yellowPlayer = 'yellow'
 let currentPlayer = redPlayer
@@ -122,10 +123,13 @@ const checkBoard = () => {
     ) {
       result.innerHTML = 'Player yellow wins!'
       // if all tiles are cllicked and no none of the other if statements occur then its a draw
-    } else if (winningArrays.onclick == true) {
-      result.innerHTML = 'Draw!'
+    } else if (playerdraw) {
     }
   }
+}
+const playerdraw = () => {
+  tiles[i].classList.contains('taken')
+  return (result.innerHTML = 'Draw!')
 }
 
 const ResetBoard = () => {
