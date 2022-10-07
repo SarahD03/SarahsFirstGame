@@ -4,7 +4,6 @@ let currentPlayer = redPlayer
 let result = document.querySelector('.playerText')
 let taken
 let reset = document.querySelector('button')
-
 let tiles = document.querySelectorAll('.tile')
 
 // adds tiles in spots clicked and adds taken class so it cant be played over again
@@ -100,17 +99,41 @@ const checkBoard = () => {
     [12, 19, 26, 33],
     [13, 20, 27, 34]
   ]
+  //loops through the array conditions to match indexes to declare winner
+  for (let y = 0; y < winningArrays.length; y++) {
+    const tile1 = tiles[winningArrays[y][0]]
+    const tile2 = tiles[winningArrays[y][1]]
+    const tile3 = tiles[winningArrays[y][2]]
+    const tile4 = tiles[winningArrays[y][3]]
+    // 4 classes of red tile, red wins
+    if (
+      tile1.classList.contains('redTile') &&
+      tile2.classList.contains('redTile') &&
+      tile3.classList.contains('redTile') &&
+      tile4.classList.contains('redTile')
+    ) {
+      result.innerHTML = 'Player red wins!'
+      // 4 classes of yellow tile, yellow wins
+    } else if (
+      tile1.classList.contains('yellowTile') &&
+      tile2.classList.contains('yellowTile') &&
+      tile3.classList.contains('yeloowTile') &&
+      tile4.classList.contains('yellowTile')
+    ) {
+      result.innerHTML = 'Player yellow wins!'
+    }
+  }
+}
 
+const ResetBoard = () => {
+  for (let i = 0; i < tiles.length; i++) {
+    tiles[i].classList.remove('redTile')
+    tiles[i].classList.remove('yellowTile')
+    currentPlayer = redPlayer
+  }
+}
+reset.addEventListener('click', ResetBoard)
 
-
-// const ResetBoard = () => {
-//   for (let i = 0; i < tiles.length; i++) {
-//     tiles[i].classList.remove('redTile')
-//     tiles[i].classList.remove('yellowTile')
-//     currentPlayer = redPlayer
-//   }
-// }
-// reset.addEventListener('click', ResetBoard)
 tiles.forEach((tile) => tile.addEventListener('click', checkBoard))
 
 // const init = () => {
