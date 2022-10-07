@@ -123,13 +123,19 @@ const checkBoard = () => {
     ) {
       result.innerHTML = 'Player yellow wins!'
       // if all tiles are cllicked and no none of the other if statements occur then its a draw
-    } else if (playerdraw) {
+    }
+    if (playerdraw) {
     }
   }
 }
 const playerdraw = () => {
-  tiles[i].classList.contains('taken')
-  return (result.innerHTML = 'Draw!')
+  let draw = 0
+  tiles.forEach((til, i) => {
+    if (tiles[i] == 'taken') draw++
+  })
+  if (draw === 49) {
+    return (result.innerHTML = 'Draw!')
+  }
 }
 
 const ResetBoard = () => {
