@@ -121,6 +121,7 @@ const checkBoard = () => {
       tile4.classList.contains('yellowTile')
     ) {
       result.innerHTML = 'Player yellow wins!'
+      // if all tiles are cllicked and no none of the other if statements occur then its a draw
     } else if (winningArrays.onclick == true) {
       result.innerHTML = 'Draw!'
     }
@@ -137,21 +138,3 @@ const ResetBoard = () => {
 reset.addEventListener('click', ResetBoard)
 
 tiles.forEach((tile) => tile.addEventListener('click', checkBoard))
-
-// const init = () => {
-//   document
-//     .getElementsByClassName('taken')
-//     .addEventListener('mouseover', highlightTile)
-//   document
-//     .getElementsByClassName('taken')
-//     .addEventListener('mouseout', unhighlight)
-// }
-
-// const highlightTile = () => {
-//   document.getElementsByClassName('tile').style.accentColor = 'grey'
-// }
-// const unhighlight = () => {
-//   document.getElementsByClassName('tile').style.accentColor = 'white'
-// }
-
-// init()
